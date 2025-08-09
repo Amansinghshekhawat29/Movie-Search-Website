@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎬 Movie Search App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎥 Movie Finder with Watchlist</h1>
+
+    <div id="siteLinks">
+      <span class="site-link" data-url="https://vegamovies.ax/">Vegamovies</span>
+      <span class="site-link" data-url="https://www.google.com/search?q=mkvcinema">MkvCinemas</span>
+      <span class="site-link" data-url="https://hdhub4u.build/">HDHub4u</span>
+      <span class="site-link" data-url="https://filmyfly.reisen/">Filmyfly</span>
+      <span class="site-link" data-url="https://www.google.com/search?q=filmyzilla">Filmyzilla</span>
+      <span class="site-link" data-url="https://themoviesflix.gg/">Moviesflix</span>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search movie..." />
+      <select id="yearSelect">
+        <option value="">Year</option>
+      </select>
+      <button onclick="searchMovies()">Search</button>
+    </div>
+
+    <h2>Search Results</h2>
+    <div id="movieResults" class="movie-grid"></div>
+
+    <h2>📌 My Watchlist</h2>
+    <div id="watchlist" class="movie-grid"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="movieModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div id="modalDetails">Loading...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
